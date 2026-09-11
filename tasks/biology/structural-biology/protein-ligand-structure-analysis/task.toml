@@ -1,0 +1,11 @@
+domain: Biology
+subdomain: Structural Biology / Computational Biology / Bioinformatics
+workflow type: Computational modeling
+task type(s): comparative analysis, structural analysis, computational analysis, etc.
+skills: protein sequence analysis, structural bioinformatics, ligand/chemical-structure analysis, molecular visualization/geometry, evidence evaluation
+tool types: sequence-alignment tools, structural-analysis tools, cheminformatics tools, scripting/command-line tools
+estimated step count: at least 25 logical steps
+expected expert time: 180 mins 
+difficulty explanation: integrating sequence, 3D structure, ligand records, coordinate limitations, and competing evidence
+references: research paper
+agent timeout: 900 seconds
