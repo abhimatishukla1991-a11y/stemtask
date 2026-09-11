@@ -1,0 +1,61 @@
+## Sequence comparison and structural transfer
+
+The target is CYP24A1 (UniProt Q07973). Comparison of the target sequence with the coordinate-covered sequence represented by the supplied template gives approximately **85.8% sequence identity** over the represented region. This level of identity supports use of the template for interpreting the overall fold and proposed binding region, but it does not imply that every residue is conserved.
+
+The sequence differences are relevant to transferring the binding pocket from the template to the target. In particular, substitutions in or near the active-site/pocket region can alter local geometry, side-chain interactions, and ligand accommodation. Therefore, the three-dimensional pocket identified from the template is a useful structural hypothesis, but residue-level transfer should be treated with appropriate caution.
+
+## Binding region and pocket architecture
+
+The most plausible binding region is the CYP24A1 active-site/pocket cavity identified from the **three-dimensional protein coordinates**. The assessment considers relevant structural features including **pocket/cavity geometry, accessibility, and residue composition**. These features provide the structural context for evaluating whether the library compounds could plausibly be accommodated.
+
+The available structural copies should be considered when describing the pocket, noting that chains A and B represent repeated copies of the protein in the crystal structure. The pocket architecture can therefore be used to assess whether the library compounds have chemical and geometric features that could plausibly be accommodated.
+
+This is a structure-based assessment only. Identification of a pocket or apparent complementarity does not by itself demonstrate experimentally established ligand binding to CYP24A1.
+
+## Ligand-library characterisation
+
+The supplied `/app/ligand_library.sdf` contains **four distinct compounds**:
+
+1. **BindingDB_compound_1** — PubChem CID **91930073**, ChEMBL **CHEMBL1627233**, BindingDB monomer ID **50370925**. The SDF record contains **34 atoms and 37 bonds** and gives the formula **C29H41NO3S**. The supplied BindingDB record associates this compound with CYP24A1 and reports an **IC50 of 6.5 nM**. Its structure contains a steroid-like polycyclic framework, hydroxyl groups, and a sulfonamide-containing phenyl substituent.
+
+2. **BindingDB_compound_2** — PubChem CID **91935926**, ChEMBL **CHEMBL541423**, BindingDB monomer ID **50214607**. The SDF record contains **34 atoms and 37 bonds** and gives the formula **C29H39NO3S**. Its supplied BindingDB target annotation is **CYP27B1**, rather than CYP24A1. Therefore, it should not be treated as a CYP24A1-specific candidate solely from the supplied target annotation.
+
+3. **BindingDB_compound_3** — PubChem CID **118712541**, ChEMBL **CHEMBL3329769**, BindingDB monomer ID **50023348**. The supplied record associates it with CYP24A1 and reports a **Ki of 7.8 nM**. The SDF entry contains **34 atoms and 37 bonds**. Its structure is a nitrogen-containing heterocyclic/aromatic analogue distinct from the steroid-like compounds 1 and 2.
+
+4. **BindingDB_compound_4** — PubChem CID **118712542**, ChEMBL **CHEMBL3329770**, BindingDB monomer ID **50023349**. The supplied record associates it with CYP24A1 and reports a **Ki of 9.7 nM**. The SDF entry contains **36 atoms and 39 bonds**, with greater heteroatom content than compound 3.
+
+Thus, the library contains **four**, not one, candidate structures. Compounds 1, 3, and 4 have supplied CYP24A1 annotations, whereas compound 2 has a supplied CYP27B1 annotation. The reported IC50/Ki values are experimental metadata from the ligand records and should not be presented as results derived from the supplied CYP24A1 structure.
+
+## Protein–ligand coordinate relationship and contact analysis
+
+The supplied SDF files contain three-dimensional ligand coordinates, but the files do not establish that those coordinates are in the same coordinate frame as the protein coordinates in `/app/template.pdb`. No explicit reproducible transformation or ligand-bound placement is supplied.
+
+The specified contact criterion is **≤4.0 Å between any ligand non-hydrogen atom and any protein non-hydrogen atom**. However, this calculation is meaningful only when the protein and ligand coordinates are demonstrably in the same coordinate frame, or when an explicit transformation establishes that relationship.
+
+Because no such coordinate relationship is established here, the protein–ligand contact sets, contacting residues, and minimum protein–ligand distances for the four compounds are **not determinable from the supplied files**. This must not be interpreted as zero contacts or as evidence that the compounds are spatially incompatible with the pocket.
+
+## Structural quality
+
+The supplied protein structure has a resolution of **2.50 Å**, with **R-work = 0.206** and **R-free = 0.252**. The reported coordinate-error estimates are approximately **0.467 Å** from the R value, **0.281 Å** from the free R value, and **0.192 Å** from the maximum-likelihood estimate.
+
+These values support interpretation of the overall protein fold and pocket architecture, but the resolution and coordinate uncertainties limit confidence in very fine atom-level interaction assignments.
+
+The reported bond-length deviation is **0.009 Å**, and the bond-angle deviation is **1.136°**. These indicate generally restrained structural geometry, while not eliminating the limitations associated with the resolution and coordinate uncertainty.
+
+## Final prioritisation decision
+
+**A defensible structural/contact-based ranking of the four library compounds cannot be established from the supplied files.**
+
+This is because the ligand coordinates in `/app/ligand_library.sdf` are not demonstrated to share a common coordinate frame with `/app/template.pdb`, and no explicit transformation or ligand-bound placement is provided. Consequently, the required ≤4.0 Å contacts, contacting residues, minimum protein–ligand distances, and actual three-dimensional complementarity of **BindingDB_compound_1, BindingDB_compound_2, BindingDB_compound_3, and BindingDB_compound_4** cannot be established.
+
+**Therefore, none of the four compounds should be designated as the structurally preferred candidate on the basis of the supplied coordinates alone.** Ligand placement, docking, or an experimentally determined protein–ligand complex would be required before assigning a defensible structure-based ranking.
+
+## Conclusion
+
+The approximately **85.8% sequence identity** makes the template informative for the CYP24A1 fold and proposed binding region, although sequence differences limit confidence in direct residue-level transfer. The **2.50 Å** structure, its refinement statistics, coordinate-error estimates, and reported geometric deviations support interpretation of the overall pocket while limiting very fine-grained structural conclusions.
+
+The ligand library contains **four distinct compounds**, with supplied identifiers and differing target annotations and chemical structures. Three compounds are associated with CYP24A1 in the supplied records, while BindingDB_compound_2 is associated with CYP27B1.
+
+Because the ligand and protein coordinates have no demonstrated common coordinate frame, a valid **≤4.0 Å contact analysis cannot be performed** for any of the four compounds. **The final decision is therefore that no defensible structural ranking of the four library compounds can be established from the supplied structural evidence, and none should be selected as the preferred candidate on the basis of these coordinates alone.**
+
+This conclusion reflects a limitation of the available structural evidence and does not demonstrate that any compound cannot bind. Binding affinity, inhibition, potency, and biological activity require appropriate experimental or additional computational evidence.
